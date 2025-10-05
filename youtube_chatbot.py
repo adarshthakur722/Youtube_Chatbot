@@ -30,7 +30,8 @@ from langchain_google_genai import  GoogleGenerativeAI
 # UI 
 
 
-os.environ = st.secrets['HUGGINGFACEHUB_API_TOKEN']
+os.environ["HUGGINGFACEHUB_API_TOKEN"] = st.secrets["HUGGINGFACEHUB_API_TOKEN"]
+os.environ["GOOGLE_API_KEY"] = st.secrets["GOOGLE_API_KEY"]
 
 
 st.title("🎥 YouTube AI Chatbot")
@@ -57,7 +58,7 @@ if video_url:
 
     try:
         api = YouTubeTranscriptApi()
-        transcript_list = api.fetch(video_id, languages=['en', 'hi'])
+        transcript_list = api.get_transcript(video_id, languages=['en', 'hi'])
         transcript_text = " ".join(chunk.text for chunk in transcript_list)
         st.success("Transcript fetched successfully!")
 
