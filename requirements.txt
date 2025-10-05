@@ -1,0 +1,9 @@
+youtube-transcript-api==1.2.2
+langchain
+streamlit
+sentence-transformers
+torch
+langchain_huggingface
+langchain_community
+langchain_google_genai
+langchain_core
