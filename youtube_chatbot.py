@@ -58,7 +58,7 @@ if video_url:
 
     try:
         api = YouTubeTranscriptApi()
-        transcript_list = api.get_transcript(video_id, languages=['en', 'hi'])
+        transcript_list = api.fetch(video_id, languages=['en', 'hi'])
         transcript_text = " ".join(chunk.text for chunk in transcript_list)
         st.success("Transcript fetched successfully!")
 
