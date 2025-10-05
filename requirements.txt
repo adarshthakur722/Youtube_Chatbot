@@ -1,14 +1,21 @@
 streamlit==1.39.0
 youtube-transcript-api==1.2.2
+
+
 langchain==0.2.12
 langchain-community==0.2.10
 langchain-huggingface==0.0.3
-langchain-google-genai==0.0.6
-google-generativeai==0.3.2
+langchain-google-genai==1.0.3
+google-generativeai==0.7.2
+
+
 sentence-transformers==2.7.0
-torch==2.7.0
+torch==2.5.1
 transformers==4.43.4
-scikit-learn==1.4.2
+scikit-learn==1.5.2
+
+
 python-dotenv==1.0.1
+
 
 
