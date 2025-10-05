@@ -30,7 +30,7 @@ from langchain_google_genai import  GoogleGenerativeAI
 # UI 
 
 
-
+os.environ = st.secrets['HUGGINGFACEHUB_API_TOKEN']
 
 
 st.title("🎥 YouTube AI Chatbot")
@@ -78,7 +78,7 @@ if transcript_text:
 
 # Embedding
 
-embeddings = HuggingFaceEmbeddings(model_name = 'sentence-transformers/all-MiniLM-L6-v2', api_key =st.secrets['HUGGINGFACEHUB_API_TOKEN'])
+embeddings = HuggingFaceEmbeddings(model_name = 'sentence-transformers/all-MiniLM-L6-v2')
 
 vector_store = FAISS.from_documents(documents, embeddings)
 
